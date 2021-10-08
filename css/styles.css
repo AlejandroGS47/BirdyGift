@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    background-color: #000000;
+    cursor: default;
+}
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+header:before{
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../imagenes/bosque.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@keyframes fadetitle {
+
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
+}
+
+.text-box, .nav-links {
+    animation: fadetitle 2s;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+nav img {
+    width: 80px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    transform: translateY(25%);
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fbfbfb;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links ul li a:hover {
+    color: #f9c646;
+}
+/* /Navbar */
+
+
+.text-box {
+    width: 90%;
+    color: #edf0f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 92px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 24px;
+}
+
+@media (max-width: 767px) {
+
+    .text-box h1 {
+        font-size: 52px;
+    }
+    .text-box p {
+        margin: 10px 0 40px;
+        font-size: 14px;
+    }
+    
+}
+
+@media(max-width: 600px){
+
+    .hide-small {
+        display: none;
+    }
+
+    .move-right {
+        width: 100%;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+}
+
+@media(max-width: 325px) {
+    .logo {
+        width: 60px;
+    }
+}
+
+
+
+
+/* Nosotros */
+.nosotros {
+    background-color: #000000;
+    min-height: 100vh;
+
+}
+
+.contenido-nosotros {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding-top: 65px;
+    color: #dadada;
+    max-width: 900px;
+}
+
+.nosotros h1 {
+    font-size: 46px;
+
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.texto-nosotros {
+    background-color: #f4cf73;
+    padding: 5% 5%;
+    color: #000;
+    box-sizing: border-box;
+    border-radius: 30px;
+    flex: 1;
+    font-size: 25px;
+    line-height: 1.55;
+    text-align: justify;
+    margin-right: 0;
+}
+
+@media(max-width: 550px) {
+    .texto-nosotros {
+        font-size: 20px;
+        border-radius: 25px;
+    }
+    .nosotros h1 {
+        font-size: 40px;
+    }
+}
+@media(max-width: 450px) {
+    .texto-nosotros {
+        font-size: 17px;
+        border-radius: 20px;
+    }
+    .noscasitas h1 {
+        font-size: 35px;
+    }
+}
+@media(max-width: 370px) {
+    .texto-noscasitas {
+        font-size: 15px;
+        border-radius: 15px;
+    }
+    .nosotros h1 {
+        font-size: 32px;
+    }
+}
+@media(max-width: 320px) {
+    .texto-nosotros {
+        font-size: 13px;
+    }
+    .nosotros h1 {
+        font-size: 28px;
+    }
+}
+@media(max-width: 250px) {
+    .texto-nosotros {
+        font-size: 11px;
+    }
+    .nosotros h1 {
+        font-size: 24px;
+    }
+}
+
+.texto-img {
+    padding-top: 40px;
+
+}
+
+
+.nosotros img {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    transform: translateY(2.5%);
+}
+/* /Nosotros */
+
+/* Productos */
+
+.row {
+    margin: 0;
+}
+
+.productos {
+    padding: 80px 0;
+
+    background-image: linear-gradient(to bottom right, #bfc3ca, #bfc3ca);
+}
+
+.productos h1 {
+    padding-bottom: 50px;
+    color: #fff;
+}
+
+.contenido-productos {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    color: #dadada;
+    max-width: 900px;
+}
+
+
+
+.productos-col {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.productos-col img {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    border-radius: 20px;
+    transition: 0.5s;
+    border: 4px solid rgb(255, 255, 255);
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 94.6%;
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 12px;
+    transition: 0.5s;
+
+}
+
+.layer:hover {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+
+.layer h2 {
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h2 {
+    bottom: 45%;
+    opacity: 1;
+    color: #dadada;
+}
+
+.link-img {
+    color: #dadada;
+}
+
+.productos-col .img-a a {
+    color: #dadada;
+}
+
+
+@media(max-width: 1000px) {
+    .layer {
+        width: 93.7%;
+    }
+}
+
+@media(max-width: 900px) {
+    .layer {
+        background: transparent;
+        height: 100%;
+        width: 92.8%;
+        position: absolute;
+        border-radius: 20px;
+        top: 0;
+        left: 12px;
+        transition: 0.5s;
+    }
+}
+
+@media(max-width: 767px) {
+    .productos {
+        padding: 40px 0;
+    }
+
+    .layer {
+        background: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border-radius: 20px;
+        top: 0;
+        left: 0;
+    }
+
+    .productos-col img {
+        display: block;
+        width: 100%;
+        padding-right: 0;
+        border-radius: 20px;
+        transition: 0.5s;
+        transform: scale(1.2);
+    }
+
+    .layer h2 {
+        color: #dadada;
+        width: 100%;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 1;
+        bottom: 45%;
+    }
+
+    .layer h2::before {
+        color: #dadada;
+    }
+}
+
+@media(max-width: 405px) {
+    .layer h2 {
+        font-size: 120%;
+    }
+}
+@media(max-width: 307px) {
+    .layer h2 {
+        font-size: 100%;
+    }
+}
+@media(max-width: 270px) {
+    .layer h2 {
+        font-size: 80%;
+    }
+}
+
+/* /Productos */
+
+/* Contacto */
+
+.contacto {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../imagenes/fondo-contacto.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+
+.container {
+    color: rgb(0, 0, 0);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #bfc3ca;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container h1 {
+    font-size: 40px;
+}
+
+.form-group {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin-top: 5px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 25%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #3191e4;
+    color: white;
+    transition: .3s ease background-color;
+}
+
+button[type="submit"]:hover {
+    background-color: #22659f;
+}
+
+@media(max-width: 600px) {
+    .container h1 {
+        font-size: 30px;
+    }
+    .form-group {
+        font-size: 20px;
+    }
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media(max-width: 450px) {
+    .container {
+        width: 90%;
+    }
+    .container h1 {
+        font-size: 20px;
+    }
+    .form-group {
+        font-size: 15px;
+    }
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 250px) {
+    .container h1 {
+        font-size: 15px;
+    }
+    .form-group {
+        font-size: 12px;
+    }
+}
+
+#status {
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.success {
+    background-color: rgb(179, 255, 179);
+    animation: status 5s ease forwards;
+}
+
+.error {
+    background-color: #ffc1c1;
+    animation: status 5s ease forwards;
+}
+
+@keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    80% {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+/* /Contacto */
+
+/* Footer */
+
+footer {
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.icons-footer {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.icons-footer a {
+    text-decoration: none;
+    color: white;
+    width: 1px;
+    height: 1px;
+}
+
+.bi-facebook {
+    transition: all 0.5s;
+}
+
+.bi-facebook:hover {
+    color: #447df7;
+}
+
+.bi-instagram {
+    transition: all 0.5s;
+}
+
+.bi-instagram:hover {
+    color: #E1306C;
+}
+
+.facebook {
+    padding-right: 20px;
+}
+
+footer h5 {
+    font-size: 10px;
+    color: #626161;
+}
+
+@media(max-width: 400px) {
+    footer h2 {
+        font-size: 20px;
+    }
+    footer h5 {
+        font-size: 8px;
+    }
+}
+
+@media(max-width: 300px) {
+    footer h2 {
+        font-size: 15px;
+    }
+    .facebook {
+        padding-right: 10px;
+    }
+}
